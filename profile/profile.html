@@ -84,7 +84,7 @@
           draw();
         </script>
      <ul>
-      <li><a class="menu" href="/">Main</a></li>
+      <li><a class="menu" href="../index.html">Main</a></li>
       <li><a class="menu" href="../products/product.html">Product</a></li>
       <li><a class="content" href="../cart/cart.html">Cart</a></li>
       <li><a class="content" href="#">Profile</a></li>
@@ -93,10 +93,10 @@
     
           <ul class="profile">
           <img id="avatarInput" src="../static/default_avatar.png" alt="">
-          <li><span class="firstname"></span></li>
-          <li><span class="lastname"></span></li>
-          <li><span class="phone"></span></li>
-          <li><span class="email"></span></li>
+          <span class="firstname"></span>
+          <span class="lastname"></span>
+          <span class="phone"></span>
+          <span class="email"></span>
         </ul>
           <script>
             const firtsname = document.querySelector('.firstname')
@@ -104,10 +104,17 @@
             const phone = document.querySelector('.phone')
             const email = document.querySelector('.email')
             const user = JSON.parse(localStorage.getItem('user'))
-            firtsname.innerHTML = `First name: ${user.firstName}`
-            lastname.innerHTML = `Last name: ${user.lastName}`
-            phone.innerHTML = `Email: ${user.email}`
-            email.innerHTML = `Phone: ${user.phone}`
+            if(user.nameVal != null)
+            {
+              firtsname.innerHTML = `First name: ${user.nameVal}`
+            lastname.innerHTML = `Last name: ${user.lastNameVal}`
+            phone.innerHTML = `Email: ${user.emailVal}`
+            email.innerHTML = `Phone: ${user.phoneVal}`
+            }
+            else{
+              email.innerHTML = `Phone: ${user.emailVal}`
+            }
+          
           </script>
       
         <script src="./profile.js"></script>

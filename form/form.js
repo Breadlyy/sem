@@ -61,8 +61,12 @@ form.onsubmit = function ()
     } else {
         inputCheckbox.classList.remove('error')
     }
+    
     localStorage.setItem("jwtToken", "token");
-    window.location.href = '/';    
+    const user = {nameVal, lastNameVal, emailVal, phoneVal }
+    localStorage.setItem('user', JSON.stringify(user))
+    window.location.href = 'sem/';    
+
     // //sending user's data on server
     // sendData(nameVal, lastNameVal, emailVal, phoneVal, passwordVal)
 };
