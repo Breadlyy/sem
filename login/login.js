@@ -33,7 +33,7 @@ let form = document.querySelector('.js-form'),
     localStorage.setItem("jwtToken", "token");
     const user = {emailVal};
     localStorage.setItem('user', JSON.stringify(user))
-    window.location.href = 'sem/'; 
+    window.location.href = '../'; 
   }
 
     // //sending user's data on server for log in

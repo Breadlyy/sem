@@ -65,7 +65,7 @@ form.onsubmit = function ()
     localStorage.setItem("jwtToken", "token");
     const user = {nameVal, lastNameVal, emailVal, phoneVal }
     localStorage.setItem('user', JSON.stringify(user))
-    window.location.href = 'sem/';    
+    window.location.href = '../';    
 
     // //sending user's data on server
     // sendData(nameVal, lastNameVal, emailVal, phoneVal, passwordVal)
