@@ -89,18 +89,19 @@
     <ul class="kcas">
     <li class="products_element">
       <span class="products_element__name">kcas 600w</span>
-      <img class="products_element__img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F51qDD%252BInAfL.__AC_SY300_QL70_ML2_.jpg&f=1&nofb=1&ipt=264022139a0a45f3d1d713ebfa6adc5504faf3f3dd2390db8477e16fa62d02b3&ipo=images"/>
+      <img alt="kcas mega power" class="products_element__img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F51qDD%252BInAfL.__AC_SY300_QL70_ML2_.jpg&f=1&nofb=1&ipt=264022139a0a45f3d1d713ebfa6adc5504faf3f3dd2390db8477e16fa62d02b3&ipo=images"/>
       <span class="products_element__price">30$</span> 
-      <button class="products_element__btn" data_id="el10" onClick="addToCart()">Add to cart</button>
+      <button class="products_element__btn" id="el10" onClick="addToCart()">Add to cart</button>
   
-    <audio id="el10" src="kcas_audio.mp3"></audio>
-                <button onclick="playAudio()">Play kcas explosion</button>
+    <audio></audio>
+                <button onclick="playSound()">Play kcas explosion</button>
                 <script>
-                  function playAudio() {
-              var audio = document.getElementById("el10");
-              audio.play();
-            }
-            
+                  function playSound() {
+                   
+                    var audio = new Audio('kcas_audio.mp3');
+                 
+                    audio.play();
+                  }
                 </script>
                 </li>
                 </ul>
